@@ -11,6 +11,20 @@ e.page()}}();
 </head>
 <body>
   Hello world :) 
-  <button>Click button</button>
+  <button id="myButton">Click button</button>
+
+  <script>
+    // Get the button element by its id
+    var button = document.getElementById("myButton");
+
+    // Add an event listener to track button clicks
+    button.addEventListener("click", function() {
+      // Track the button click event using Segment
+      htevents.track('Button Clicked', {
+        property1: 'property 1',
+        property2: 'property 2'
+      });
+    
+    });
 </body>
 </html>
