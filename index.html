@@ -13,8 +13,18 @@ var button = document.getElementById("myButton");
     button.addEventListener("click", function() {
       // Track the button click event using Segment
       htevents.track('Button Clicked', {
-        property1: 'property 1',
-        property2: 'property 2'
+        button: 'first button',
+        order: 'first'
+      });
+    });
+    var button = document.getElementById("myButton2");
+
+    // Add an event listener to track button clicks
+    button.addEventListener("click", function() {
+      // Track the button click event using Segment
+      htevents.track('Button 2 Clicked', {
+        button: 'second button',
+        order: 'second'
       });
     });
   </script>
@@ -22,10 +32,7 @@ var button = document.getElementById("myButton");
 <body>
   Hello world :) 
   <button id="myButton">Click this button</button>
+  <button id="myButton2">Then click this button</button>
 
-  <!-- <script>
-    // Get the button element by its id
-    
-    </script> -->
 </body>
 </html>
